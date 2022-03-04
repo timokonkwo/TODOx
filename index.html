@@ -19,16 +19,15 @@
 
 			<div class="todo-content">
 				<div class="todo-search">
-					<input type="search" placeholder="search..." class="search">
+					<input type="search" placeholder="search..." class="search" onsearch='onSearch(this)'/>
 					<i class="uil uil-search icon-search"></i>
 				</div>
 				<div class="todo-tasks">
-					<ul>
-						<li class="task">
-							<span class="task-name">Eat</span>
-							<i class="uil uil-ellipsis-v option-btn"></i>
-						</li>
-					</ul>
+					<div class="task-wrapper">
+						<ul>
+							<!-- Todo List to be added by User -->
+						</ul>
+					</div>
 
 					<div class="task-modal"></div>
 				</div>
@@ -37,6 +36,11 @@
 					<input type="text" name="todo-input" class="todo-input" placeholder="New Todo">
 					<input type='submit' value="Add Task" class="submit-btn">
 				</form>
+
+				<button class="clear-tasks">
+					Clear
+					<i class="uil uil-exclamation-triangle icon-clear"></i>
+				</button>
 			</div>
 		</div>						
 	</div>
