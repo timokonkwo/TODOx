@@ -23,7 +23,7 @@ const template = (todo) => {
 load = () => {
 	const todoList =
 		localStorage.getItem("tasks") == null
-			? (todoList = [])
+			? []
 			: JSON.parse(localStorage.getItem("tasks"));
 
 	todoList.forEach((todo) => template(todo));
@@ -33,7 +33,7 @@ load = () => {
 save = (todo) => {
 	const todoList =
 		localStorage.getItem("tasks") == null
-			? (todoList = [])
+			? []
 			: JSON.parse(localStorage.getItem("tasks"));
 
 	todoList.unshift(todo);
@@ -107,7 +107,7 @@ function onSearch(input) {
 deleteFromLS = (target) => {
 	const todoList =
 		localStorage.getItem("tasks") == null
-			? (todoList = [])
+			? []
 			: JSON.parse(localStorage.getItem("tasks"));
 
 	todo = target.parentElement.textContent.trim();
