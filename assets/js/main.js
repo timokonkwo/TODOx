@@ -25,11 +25,7 @@ const template = todo => {
 
 
 load = () => {
-	if (localStorage.getItem('tasks') == null) {
-		todoList = []
-	} else {
-		todoList = JSON.parse(localStorage.getItem('tasks'))
-	}
+	todoList = localStorage.getItem('tasks') == null ? todoList = [] : JSON.parse(localStorage.getItem('tasks'))
 
 	todoList.forEach(todo => template(todo))
 }
